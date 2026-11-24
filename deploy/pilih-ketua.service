@@ -1,0 +1,26 @@
+[Unit]
+Description=Pilih Ketua Paguyuban
+Documentation=file:/opt/pilih-ketua/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pilihketua
+Group=pilihketua
+WorkingDirectory=/opt/pilih-ketua
+Environment=TZ=Asia/Jakarta
+EnvironmentFile=/etc/pilih-ketua/env
+ExecStart=/opt/pilih-ketua/pilih-ketua
+Restart=always
+RestartSec=2
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/pilih-ketua
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

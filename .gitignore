@@ -1,0 +1,23 @@
+# Binary hasil build
+bin/
+dist/
+
+# Data runtime: database, upload foto, dan secret HMAC
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Konfigurasi lokal
+.env
+.env.*
+*.log
+
+# Editor & sistem operasi
+.DS_Store
+*.swp
+*.tmp
+
+# Go
+*.test
+coverage.out

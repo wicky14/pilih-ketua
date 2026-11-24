@@ -1,0 +1,7 @@
+# Ganti domain sesuai server Anda.
+pilih.contoh.id {
+	encode zstd gzip
+
+	# Caddy meneruskan X-Forwarded-For dan X-Forwarded-Proto secara default.
+	reverse_proxy 127.0.0.1:3000
+}
